@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsTrackr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" class="logo" onclick="reload()"><img src="logo.png" alt="logo" /></a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li class="hover-link nav-item" id="Business" onclick="onNavItemClick('Business')">Business</li>
+            <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">finance</li>
+            <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input type="text" class="news-input" id="search-news"  placeholder="e.g. Business" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+    <template id="tempalte-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the title</h3>
+          <h6 class="news-source" id="news-source">End Gaget</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ex
+            unde saepe ut aspernatur minima quia nesciunt. Maxime, doloremque
+            fugit.
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
